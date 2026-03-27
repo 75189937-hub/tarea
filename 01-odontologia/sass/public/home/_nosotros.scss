@@ -1,0 +1,183 @@
+@use "../../base/variables" as v;
+.nosotros {
+    background: #01D4FF;
+    background: linear-gradient(94deg, rgba(1, 212, 255, 0.09) 0%, rgba(0, 212, 255, 0) 17%, rgba(0, 212, 255, 0.09) 100%);
+    background-position: center;
+    background-size: cover;
+    
+    &__contenedor {    
+        
+        justify-content: center;
+        align-items: flex-start;
+        padding-bottom: 1rem;
+        display: flex;
+        gap: 6.4rem;
+        
+        &__izquierda{
+            flex: 0 0 50%;
+            
+            &__inicio { 
+                margin-top: 3.2rem;       
+                &--icon {
+                  
+                    color: rgb(13, 155, 230);
+                    font-size: 1.4rem;
+                    background-color: rgb(14, 162, 231, .1);
+                    border-radius: 9rem;
+                    padding: .8rem 1.6rem;
+                
+                
+                    svg {
+                        width: 1.4rem;
+                    }
+                }
+                
+                &--title{
+                    margin-top: 3.2rem;
+                    font-size: 7.2rem;
+                    font-family: "Playfair Display", serif;
+                    
+                    &--span {
+                        white-space: nowrap;
+                        color: rgb(13, 155, 230);
+                    }
+                    
+                }
+                &--frase {
+                    margin-top: 2.4rem;
+                    font-size: 1.8rem;
+                    color: rgb(108, 124, 147);
+                    font-family: "Inter", sans-serif;
+                    max-width: 512px;
+                }
+            }
+           
+           
+           
+           
+            &__menu {
+                margin-top: 4.5rem;
+                display: flex;
+                gap: 2rem;
+                width: 100%;
+               
+                &--portal{
+                    font-size: 1.4rem;
+                    color: rgb(29, 36, 48);
+                    padding: 1.8rem 2.4rem;
+                    border-color: rgb(28, 56, 56);
+                    border-radius: 1rem;
+                    border: 2px solid rgba(29, 36, 48, .2);
+                    &:hover {
+                        color: white;
+                        background-color: rgb(26, 188, 156);
+                    }
+                }
+                &--cita{
+                    display: flex;
+                    color:white;
+                    font-size: 1.4rem;
+                    padding: 1.8rem 2.4rem;
+                    background-color: rgb(13, 155, 230);
+                    border-radius: 1rem;
+                    gap: 1rem;
+                    align-items: center;
+                    svg {
+                        width: 2rem;
+                        
+                        
+                    }
+                }
+            }
+            
+            
+            
+            &__conoce{
+                margin-top: 5.6rem;
+                gap: 3.2rem;
+                display: flex;
+                
+                
+                &__experiencia {
+                    align-items: center;
+                    display: flex;
+                    &--icon {
+                        margin-right: 2rem;
+                        background-color: rgb(13, 155, 230, .1);
+                        padding: 1.3rem;
+                        border-radius: 1.2rem;
+
+                        svg {
+                            width: 2rem;   
+                            color: rgb(13, 155, 230)
+                        }
+                    }
+                    &--text{
+                        h3{
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                        }
+                        p{
+                            font-size: 1.2rem;
+                            color: rgb(108, 124, 147);
+                        }
+                    }
+                }
+            }  
+            
+        }
+     
+        
+            
+        &__derecha {
+            flex: 0 0 50%;
+            &__portada{
+                position: relative;
+                &--imagen {                   
+                    border-radius: 2.4rem;
+                    width: 90%;
+                    height: 55rem;
+                    object-fit: cover;
+                    display: block;
+                }
+                &__experiencia {
+                    display: flex;
+                    align-items: center;
+                    padding: 2rem;
+                    border-radius: 1.6rem;
+
+                    position: absolute;
+                    bottom: -2.4rem;
+                    left: -2.4rem;
+                    background-color: white;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    
+                    &--icon {
+                        margin-right: 2rem;
+                        background-color: rgba(26, 188, 156, .15);
+                        padding: 1.3rem;
+                        border-radius: 1.2rem;
+                        
+                        svg {
+                            width: 2.8rem; 
+                            color: rgb(26, 188, 156);  
+                        }
+                    }
+                    &--text{
+                        h3{
+                            font-size: 1.6rem;
+                        }
+                        p{
+                            font-size: 1.2rem;
+                            color: rgb(108, 124, 147);
+                            font-weight: 300;
+                            line-height: 1.2rem;
+                        }
+                    }   
+                }
+            }
+
+        }
+            
+    } 
+}

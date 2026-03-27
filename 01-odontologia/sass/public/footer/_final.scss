@@ -1,0 +1,135 @@
+.final {
+    
+    width: 100%;
+    background-color: rgb(29, 38, 48);
+    &__contenedor{
+        padding: 6.4rem 3.2rem;
+        &__contenido{
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 4rem;
+                &__primero{
+                    width: calc(25% - 4rem);
+                    
+                    
+                    img{
+                        width: 5rem;
+                        margin-bottom: 2.4rem;
+                    }
+                    p{
+                        font-size: 1.4rem;
+                        color: #fff9;
+                        line-height: 2.2rem;
+                    }
+                }
+                &__segundo{
+                    width: calc(25% - 4rem);
+                                    
+                  
+                    h3{
+                        color: white;
+                        font-size: 2rem;
+                        margin-bottom: 2.4rem;
+                    }
+                    ul{
+                        li{
+                            list-style: none;
+                            margin-top: 1.2rem;
+                            a{
+                                font-size: 1.4rem;
+                                color: #fff9;
+                                //line-height: 3rem;
+                        
+                            }
+                        }
+
+                    }
+                    
+                }
+                &__tercero{
+                    width: calc(25% - 4rem);
+                    
+                    
+                    h3{
+                        color: white;
+                        font-size: 2rem;
+                        margin-bottom: 2.4rem;
+                    }
+                    ul{
+                        li{
+                            list-style: none;
+                            margin-top: 1.2rem;
+                            a{
+                                font-size: 1.4rem;
+                                color: #fff9;
+                                //line-height: 3rem;
+                        
+                            }
+                        }
+
+                    }
+                }
+                &__cuarto{
+                    width: calc(25% - 4rem);
+                    
+                    h3{
+                        color: white;
+                        font-size: 2rem;
+                        margin-bottom: 2.4rem;
+                        }
+                    ul{
+                        li{
+                            list-style: none;
+                            display: flex;
+                            margin-top: 1.2rem;
+                            gap: 1rem;
+                            p{
+                                display: flex;
+                                font-size: 1.4rem;
+                                color: #fff9;
+                        
+                            }
+                            svg {
+                                width: 1.8rem;
+                                color: rgb(13, 155, 230);
+                            }
+                        
+                        }
+                    }
+                    &--icon{
+                        margin-top: 2.4rem;
+                        display: flex;
+                        gap: 2rem;
+                        a {
+                            display: flex;
+                            padding: .8rem;  
+                            background-color: rgba(249, 250, 252, .1);
+                            border-radius: 1rem;
+                            gap: 1rem;
+                            fill: white;
+                            &:hover {
+                                background-color: rgb(13, 155, 230);
+                            }
+                            svg {
+                                width: 2rem;
+                            }
+                        }
+                    }
+                    
+                }    
+        }
+        &__autor{
+            border-top: 1px solid #fff9;
+            padding-top: 3.2rem;
+            margin-top: 6.4rem;
+            display: flex;
+            justify-content: space-between;
+            
+            p {
+                font-size: 1.4rem;
+                color: #fff9;
+            }
+        }
+        
+    }
+}

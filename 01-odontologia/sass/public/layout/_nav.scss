@@ -1,0 +1,87 @@
+@use '../../base/variables' as v;
+.nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: white;
+    border-bottom: 1px solid rgba(black,.08);
+    @media only screen and (max-width: v.$bp-medium) {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    &__contenedor {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+        &--logo {          
+            width: 6.5rem; 
+        }
+        &__menu {
+            display: flex;
+            column-gap: .4rem;
+            @media only screen and (max-width: v.$bp-medium) {
+                display: none;
+            }
+            
+            &--link{
+              color: rgb(108, 120, 147);
+              font-size: 1.4rem;
+              padding: .8rem 1.6rem;
+              transition: all .3s;
+              &:hover {
+                background-color: rgba(5, 5, 5, .03);
+                border-radius: 1rem;
+                color: rgb(29, 36, 48);
+              }
+              &:focus {
+               background-color: rgba(17, 165, 245, 0.15);
+               border-radius: 1rem;
+               color: rgb(14, 179, 250)
+              }
+            }
+        }
+        &__menucita {
+            display: flex;
+            align-items: center;
+            column-gap: 1.2rem;
+            display: flex;
+            &--link {
+                color: rgb(108, 120, 147);
+                font-size: 1.4rem;
+                transition: all .3s;
+                svg {
+                    width: 1.4rem;
+                }
+                &:hover {
+                    color: rgb(29, 36, 48);
+                }
+            }
+            &--portal{
+                font-size: 1.4rem;
+                color: rgb(29, 36, 48);
+                padding: .9rem 2rem;
+                border-color: rgb(28, 56, 56);
+                border-radius: 1rem;
+                border: 2px solid rgba(29, 36, 48, .2);
+                &:hover {
+                    color: white;
+                    background-color: rgb(26, 188, 156);
+                }
+            }
+            &--cita{
+                color:white;
+                font-size: 1.4rem;
+                padding: 1rem 2.4rem;
+                background-color: rgb(13, 155, 230);
+                border-radius: 1rem;
+                &:hover {
+                    color: white;
+                    background-color: rgb(26, 188, 156);
+                }
+            }
+        }
+    }
+}

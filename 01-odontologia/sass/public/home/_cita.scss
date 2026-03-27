@@ -1,0 +1,86 @@
+@use "../../base/variables" as v;
+.cita{
+    
+    background: linear-gradient(0deg, rgba(0, 208, 250, 0.24) 0%, rgba(1, 212, 255, 0.34) 37%, rgba(13, 213, 254, 0.6) 96%),url(../../../img/entrada.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;         
+    &__contenedor {
+        
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: flex-start;
+        &--text{
+            max-width: 83.2rem;
+            margin: 0 auto;
+            text-align: center; 
+            margin-bottom: 6.4rem;
+            h1{
+               color: white; 
+                font-size: 4.8rem;
+                font-family: "Playfair Display", serif;
+            }
+            p{
+                margin-top: 1.6rem;
+                margin: 2.4rem 8rem 0rem 8rem;
+                font-size: 1.8rem;
+                color: rgb(108, 124, 147);
+                font-family: "Inter", sans-serif;
+            }
+        }
+        &__menu{
+            
+            margin-top: 4rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+                
+            &--llamar{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.4rem;
+                color:rgb(13, 155, 230);
+                background-color: white;
+                padding: 1.8rem 5.4rem;
+                border-color: rgb(28, 56, 56);
+                border-radius: 1rem;
+                border: 2px solid rgba(29, 36, 48, .2);
+                    &:hover {
+                        color: white;
+                        background-color: rgb(26, 188, 156);
+                    }
+                    svg{
+                        width: 2rem;
+                    }
+                }
+                
+            &--cita{
+                    display: flex;
+                    color:rgb(13, 155, 230);
+                    font-size: 1.4rem;
+                    padding: 1.8rem 5.4rem;
+                    background-color: white;
+                    border-radius: 1rem;
+                    gap: 1rem;
+                    align-items: center;
+                    border: 2px solid rgba(29, 36, 48, .2);
+                    &:hover {
+                        color: white;
+                        background-color: rgb(26, 188, 156);
+                    }
+                    svg {
+                        width: 2rem;
+                        
+                        
+                    }
+                }
+                
+        }
+          
+    }
+}

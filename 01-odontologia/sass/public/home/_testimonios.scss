@@ -1,0 +1,139 @@
+@use '../../base/variables' as v;
+.testimonios {
+    background-color: #fbbf24;
+    width: 100%;
+    &__contenedor {
+        
+        &__escrito {
+            max-width: 67.2rem;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 6.4rem;
+            
+            h3{
+                color: rgb(13, 155, 230);
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1.4rem;
+            }
+            h1{
+                margin-top: 1.2rem;
+                font-size: 4.8rem;
+                font-family: "Playfair Display", serif;
+            }
+        }
+        &__cuadros {
+            
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 2rem;
+            &__valor{
+                
+                width: calc(33.333% - 2rem);
+                padding: 3.2rem;
+                display: flex;
+                border: 2px solid rgb(217, 229, 242);
+                flex-direction: column;
+                border-radius: 1.6rem;
+                position: relative;
+                &--icono{
+                    margin-left: auto;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    svg{
+                            width: 8rem;
+                            fill: rgba(13, 155, 230, .2);
+                        }
+                }  
+                &__numero{
+                    display: flex;
+                    margin-bottom: 1.6rem;
+                    &--icon{
+                        display: flex;
+                        svg{
+                            width: 2rem;
+                            fill: #fbbf24;
+                        }
+                    &--icono{
+                        display: flex;
+                        svg{
+                            width: 2rem;
+                            fill: #fbbf24;
+                        }
+                    }
+                    }
+                }
+                p{
+                    
+                    font-size: 1.4rem;
+                    color: rgb(108, 124, 147);
+                    margin-bottom: 2.4rem;
+                    font-family: "Inter", sans-serif;
+                    line-height: 2.3rem;
+                }
+                &__perfil {
+                    display: flex;
+                    align-items: center;
+                    &--icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 2rem;
+                        background-color: rgba(13, 155, 230, .15);
+                        padding: 1rem;
+                        border-radius: 50%;
+                        svg {
+                            width: 2rem; 
+                            color: rgb(13, 155, 230);  
+                        }
+                    }
+                    &--text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h3{
+                            font-size: 1.4rem;   
+                            margin: 0;
+                            margin-bottom: .3rem;                    
+                        }
+                        p{
+                            font-size: 1.2rem;
+                            color: rgb(108, 124, 147);
+                            font-weight: 300;
+                            margin: 0;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+            }
+        }
+        &__enlace {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &--linkes{
+                    color:black;
+                    background-color: white;
+                    border: 2px solid rgb(223, 230, 236);
+                    gap: 1rem;
+                    font-size: 1.4rem;
+                    padding: 1rem 3.2rem;
+                    border-radius: 1rem;
+                    margin-top: 4.8rem;
+
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    &:hover {
+                            color: white;
+                            background-color: rgb(26, 188, 156);
+                        }  
+                    svg {
+                        width: 2rem;  
+                                            
+                    }
+            }
+        }
+    }
+}
