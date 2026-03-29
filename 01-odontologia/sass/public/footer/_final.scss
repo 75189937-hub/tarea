@@ -1,3 +1,4 @@
+@use "../../base/variables" as v;   
 .final {
     
         
@@ -116,7 +117,9 @@
                         }
                     }
                     
-                }    
+                } 
+                 
+                  
         }
         &__autor{
             border-top: 1px solid #fff9;

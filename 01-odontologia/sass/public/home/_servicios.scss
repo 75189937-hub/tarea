@@ -40,6 +40,7 @@
             
             
             &__tratamiento{
+                
                 width: calc(33.333% - 2rem);
                 padding: 3.2rem;
                 display: flex;
@@ -79,6 +80,19 @@
                         
                     }
 
+                }
+                @media only screen and (max-width: v.$bp-large) {
+                    width: calc(50% - 1.5rem);
+                    
+                    display: flex;
+                    
+                    
+                }
+                @media only screen and (max-width: v.$bp-medium) {
+                    width: 100%;
+                }
+                @media only screen and (max-width: v.$bp-small) {
+                    width: 100%;
                 }
             }
         }
