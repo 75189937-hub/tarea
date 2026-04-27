@@ -675,70 +675,39 @@
   flex-wrap: wrap;
   gap: 4rem;
 }
-.final__contenedor__contenido__primero {
-  width: calc(25% - 4rem);
+.final__contenedor__contenido article {
+  width: calc(25% - 3rem);
 }
-.final__contenedor__contenido__primero img {
+.final__contenedor__contenido article img {
   width: 5rem;
   margin-bottom: 2.4rem;
 }
-.final__contenedor__contenido__primero p {
+.final__contenedor__contenido article p {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.6);
   line-height: 2.2rem;
 }
-.final__contenedor__contenido__segundo {
-  width: calc(25% - 4rem);
-}
-.final__contenedor__contenido__segundo h3 {
+.final__contenedor__contenido article h3 {
   color: white;
   font-size: 2rem;
   margin-bottom: 2.4rem;
 }
-.final__contenedor__contenido__segundo ul li {
-  list-style: none;
-  margin-top: 1.2rem;
-}
-.final__contenedor__contenido__segundo ul li a {
-  font-size: 1.4rem;
-  color: rgba(255, 255, 255, 0.6);
-}
-.final__contenedor__contenido__tercero {
-  width: calc(25% - 4rem);
-}
-.final__contenedor__contenido__tercero h3 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 2.4rem;
-}
-.final__contenedor__contenido__tercero ul li {
-  list-style: none;
-  margin-top: 1.2rem;
-}
-.final__contenedor__contenido__tercero ul li a {
-  font-size: 1.4rem;
-  color: rgba(255, 255, 255, 0.6);
-}
-.final__contenedor__contenido__cuarto {
-  width: calc(25% - 4rem);
-}
-.final__contenedor__contenido__cuarto h3 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 2.4rem;
-}
-.final__contenedor__contenido__cuarto ul li {
+.final__contenedor__contenido article ul li {
   list-style: none;
   display: flex;
   margin-top: 1.2rem;
   gap: 1rem;
 }
-.final__contenedor__contenido__cuarto ul li p {
+.final__contenedor__contenido article ul li a {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.final__contenedor__contenido article ul li p {
   display: flex;
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.6);
 }
-.final__contenedor__contenido__cuarto ul li svg {
+.final__contenedor__contenido article ul li svg {
   width: 1.8rem;
   color: rgb(13, 155, 230);
 }

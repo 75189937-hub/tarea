@@ -6,97 +6,52 @@
     &__contenedor{
         padding: 6.4rem 3.2rem;
         &__contenido{
+            
             display: flex; 
             flex-wrap: wrap;
             gap: 4rem;
-                &__primero{
-                    width: calc(25% - 4rem);
-                    
-                    
-                    img{
-                        width: 5rem;
-                        margin-bottom: 2.4rem;
-                    }
-                    p{
+            article{
+            width: calc(25% - 12rem/4);         
+            img{
+                width: 5rem;
+                margin-bottom: 2.4rem;
+            }
+            p{
+                font-size: 1.4rem;
+                color: #fff9;
+                line-height: 2.2rem;
+            }
+            h3{
+                color: white;
+                font-size: 2rem;
+                margin-bottom: 2.4rem;
+            }
+                                       
+            ul{
+                li{
+                    list-style: none;
+                    display: flex;
+                    margin-top: 1.2rem;
+                    gap: 1rem;
+                    a{
                         font-size: 1.4rem;
                         color: #fff9;
-                        line-height: 2.2rem;
+                        //line-height: 3rem; 
                     }
+                    p{
+                        display: flex;
+                        font-size: 1.4rem;
+                        color: #fff9; 
+                    }
+                    svg {
+                        width: 1.8rem;
+                        color: rgb(13, 155, 230);
+                    }
+                        
                 }
-                &__segundo{
-                    width: calc(25% - 4rem);
-                                    
-                  
-                    h3{
-                        color: white;
-                        font-size: 2rem;
-                        margin-bottom: 2.4rem;
-                    }
-                    ul{
-                        li{
-                            list-style: none;
-                            margin-top: 1.2rem;
-                            a{
-                                font-size: 1.4rem;
-                                color: #fff9;
-                                //line-height: 3rem;
-                        
-                            }
-                        }
-
-                    }
-                    
-                }
-                &__tercero{
-                    width: calc(25% - 4rem);
-                    
-                    
-                    h3{
-                        color: white;
-                        font-size: 2rem;
-                        margin-bottom: 2.4rem;
-                    }
-                    ul{
-                        li{
-                            list-style: none;
-                            margin-top: 1.2rem;
-                            a{
-                                font-size: 1.4rem;
-                                color: #fff9;
-                                //line-height: 3rem;
-                        
-                            }
-                        }
-
-                    }
-                }
-                &__cuarto{
-                    width: calc(25% - 4rem);
-                    
-                    h3{
-                        color: white;
-                        font-size: 2rem;
-                        margin-bottom: 2.4rem;
-                        }
-                    ul{
-                        li{
-                            list-style: none;
-                            display: flex;
-                            margin-top: 1.2rem;
-                            gap: 1rem;
-                            p{
-                                display: flex;
-                                font-size: 1.4rem;
-                                color: #fff9;
-                        
-                            }
-                            svg {
-                                width: 1.8rem;
-                                color: rgb(13, 155, 230);
-                            }
-                        
-                        }
-                    }
+            } 
+            }
+            &__cuarto{
                     &--icon{
                         margin-top: 2.4rem;
                         display: flex;
@@ -117,10 +72,9 @@
                         }
                     }
                     
-                } 
-                 
+                }
+            }   
                   
-        }
         &__autor{
             border-top: 1px solid #fff9;
             padding-top: 3.2rem;
