@@ -2,46 +2,34 @@
     .nosotros {
         background: linear-gradient(94deg, rgba(1, 212, 255, 0.09) 0%, rgba(0, 212, 255, 0) 17%, rgba(0, 212, 255, 0.09) 100%);
         margin-top: 8.228rem;
-           
-        &__contenedor {   
-            @media only screen and (max-width: v.$bp-medium){
-                align-items: center;
+        &__contenedor {    
+            &__contenido{  
                 justify-content: center;
                 display: flex;
-                    flex-direction: column;
-                    gap: 3rem;
-                    width: 100%;
-            }             
-            
-            justify-content: center;
-            
-            display: flex;
-            gap: 6.4rem;  
-            
+                gap: 6.4rem;  
+                article{
+                    width: calc(50% - 6.4rem / 2);
+                    @media only screen and (max-width: v.$bp-medium) {
+                        width: 100%;
+                    }
+                    @media only screen and (max-width: v.$bp-small) {
+                        width: 100%;
+                    }        
+                }           
             &__izquierda{
-                
-               width: calc(50% - 6.4rem / 2);
-                
-                
-                
-            
+                   
                 &__inicio { 
                     margin-top: 3.2rem;
-                           
                     &--icon {
-                    
                         color: rgb(13, 155, 230);
                         font-size: 1.4rem;
                         background-color: rgb(14, 162, 231, .1);
                         border-radius: 9rem;
                         padding: .8rem 1.6rem;
-                    
-                    
                         svg {
                             width: 1.4rem;
                         }
                     }
-                    
                     &--title{
                         margin-top: 3.2rem;
                         font-size: 7.2rem;
@@ -58,14 +46,9 @@
                         font-size: 1.8rem;
                         color: rgb(108, 124, 147);
                         font-family: "Inter", sans-serif;
-                        max-width: 512px;
-                        
+                        max-width: 512px;               
                     }
-                }
-            
-            
-            
-            
+                }           
                 &__menu {
                     margin-top: 4.5rem;
                     display: flex;
@@ -97,24 +80,13 @@
                             width: 2rem;
                         }
                     }
-                }
-                
-                
-                
+                }               
                 &__conoce{
-                    @media only screen and (max-width: v.$bp-medium){
-                
-                
-                    flex-direction: column;
-                    gap: 3rem;
-                    width: calc(50% - 6.4rem / 2);
-            }
                     margin-top: 5.6rem;
                     gap: 3.2rem;
-                    display: flex;
-                    
-                    
+                    display: flex;  
                     &__experiencia {
+                        flex-wrap: wrap;
                         align-items: center;
                         display: flex;
                         &--icon {
@@ -125,31 +97,28 @@
 
                             svg {
                                 width: 2rem;   
-                                color: rgb(13, 155, 230)
+                                color: rgb(13, 155, 230);
                             }
                         }
-                        &--text{
-                            h3{
-                                font-size: 1.6rem;
-                                font-weight: 600;
-                            }
-                            p{
-                                font-size: 1.2rem;
-                                color: rgb(108, 124, 147);
-                            }
+                        
+                        h3{
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                        }
+                        p{
+                            font-size: 1.2rem;
+                            color: rgb(108, 124, 147);
                         }
                     }
                 }  
                 
             }
-        
-            
-                
-            
+         
             &__derecha {
-                
-                
-                width: calc(50% - 6.4rem / 2); 
+                @media only screen and (max-width: v.$bp-medium) {
+                    display: none;
+    
+                }        
                 &__portada{
                     position: relative;
                     &--imagen {                   
@@ -164,7 +133,6 @@
                         align-items: center;
                         padding: 2rem;
                         border-radius: 1.6rem;
-
                         position: absolute;
                         bottom: -2.4rem;
                         left: -2.4rem;
@@ -182,7 +150,7 @@
                                 color: rgb(26, 188, 156);  
                             }
                         }
-                        &--text{
+                        
                             h3{
                                 font-size: 1.6rem;
                             }
@@ -191,15 +159,10 @@
                                 color: rgb(108, 124, 147);
                                 font-weight: 300;
                                 line-height: 1.2rem;
-                            }
-                        }   
+                            }   
                     }
                 }
-            
-
             }
-            
-            
-        
-        } 
-    }
+        }        
+    } 
+}

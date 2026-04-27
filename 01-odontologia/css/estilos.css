@@ -91,60 +91,60 @@
   background: linear-gradient(94deg, rgba(1, 212, 255, 0.09) 0%, rgba(0, 212, 255, 0) 17%, rgba(0, 212, 255, 0.09) 100%);
   margin-top: 8.228rem;
 }
-@media only screen and (max-width: 48em) {
-  .nosotros__contenedor {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    width: 100%;
-  }
-}
-.nosotros__contenedor {
+.nosotros__contenedor__contenido {
   justify-content: center;
   display: flex;
   gap: 6.4rem;
 }
-.nosotros__contenedor__izquierda {
+.nosotros__contenedor__contenido article {
   width: calc(50% - 3.2rem);
 }
-.nosotros__contenedor__izquierda__inicio {
+@media only screen and (max-width: 48em) {
+  .nosotros__contenedor__contenido article {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .nosotros__contenedor__contenido article {
+    width: 100%;
+  }
+}
+.nosotros__contenedor__contenido__izquierda__inicio {
   margin-top: 3.2rem;
 }
-.nosotros__contenedor__izquierda__inicio--icon {
+.nosotros__contenedor__contenido__izquierda__inicio--icon {
   color: rgb(13, 155, 230);
   font-size: 1.4rem;
   background-color: rgba(14, 162, 231, 0.1);
   border-radius: 9rem;
   padding: 0.8rem 1.6rem;
 }
-.nosotros__contenedor__izquierda__inicio--icon svg {
+.nosotros__contenedor__contenido__izquierda__inicio--icon svg {
   width: 1.4rem;
 }
-.nosotros__contenedor__izquierda__inicio--title {
+.nosotros__contenedor__contenido__izquierda__inicio--title {
   margin-top: 3.2rem;
   font-size: 7.2rem;
   font-family: "Playfair Display", serif;
 }
-.nosotros__contenedor__izquierda__inicio--title--span {
+.nosotros__contenedor__contenido__izquierda__inicio--title--span {
   white-space: nowrap;
   color: rgb(13, 155, 230);
 }
-.nosotros__contenedor__izquierda__inicio--frase {
+.nosotros__contenedor__contenido__izquierda__inicio--frase {
   margin-top: 2.4rem;
   font-size: 1.8rem;
   color: rgb(108, 124, 147);
   font-family: "Inter", sans-serif;
   max-width: 512px;
 }
-.nosotros__contenedor__izquierda__menu {
+.nosotros__contenedor__contenido__izquierda__menu {
   margin-top: 4.5rem;
   display: flex;
   gap: 2rem;
   width: 100%;
 }
-.nosotros__contenedor__izquierda__menu--portal {
+.nosotros__contenedor__contenido__izquierda__menu--portal {
   font-size: 1.4rem;
   color: rgb(29, 36, 48);
   padding: 1.8rem 2.4rem;
@@ -152,11 +152,11 @@
   border-radius: 1rem;
   border: 2px solid rgba(29, 36, 48, 0.2);
 }
-.nosotros__contenedor__izquierda__menu--portal:hover {
+.nosotros__contenedor__contenido__izquierda__menu--portal:hover {
   color: white;
   background-color: rgb(26, 188, 156);
 }
-.nosotros__contenedor__izquierda__menu--cita {
+.nosotros__contenedor__contenido__izquierda__menu--cita {
   display: flex;
   color: white;
   font-size: 1.4rem;
@@ -166,57 +166,53 @@
   gap: 1rem;
   align-items: center;
 }
-.nosotros__contenedor__izquierda__menu--cita svg {
+.nosotros__contenedor__contenido__izquierda__menu--cita svg {
   width: 2rem;
 }
-@media only screen and (max-width: 48em) {
-  .nosotros__contenedor__izquierda__conoce {
-    flex-direction: column;
-    gap: 3rem;
-    width: calc(50% - 3.2rem);
-  }
-}
-.nosotros__contenedor__izquierda__conoce {
+.nosotros__contenedor__contenido__izquierda__conoce {
   margin-top: 5.6rem;
   gap: 3.2rem;
   display: flex;
 }
-.nosotros__contenedor__izquierda__conoce__experiencia {
+.nosotros__contenedor__contenido__izquierda__conoce__experiencia {
+  flex-wrap: wrap;
   align-items: center;
   display: flex;
 }
-.nosotros__contenedor__izquierda__conoce__experiencia--icon {
+.nosotros__contenedor__contenido__izquierda__conoce__experiencia--icon {
   margin-right: 2rem;
   background-color: rgba(13, 155, 230, 0.1);
   padding: 1.3rem;
   border-radius: 1.2rem;
 }
-.nosotros__contenedor__izquierda__conoce__experiencia--icon svg {
+.nosotros__contenedor__contenido__izquierda__conoce__experiencia--icon svg {
   width: 2rem;
   color: rgb(13, 155, 230);
 }
-.nosotros__contenedor__izquierda__conoce__experiencia--text h3 {
+.nosotros__contenedor__contenido__izquierda__conoce__experiencia h3 {
   font-size: 1.6rem;
   font-weight: 600;
 }
-.nosotros__contenedor__izquierda__conoce__experiencia--text p {
+.nosotros__contenedor__contenido__izquierda__conoce__experiencia p {
   font-size: 1.2rem;
   color: rgb(108, 124, 147);
 }
-.nosotros__contenedor__derecha {
-  width: calc(50% - 3.2rem);
+@media only screen and (max-width: 48em) {
+  .nosotros__contenedor__contenido__derecha {
+    display: none;
+  }
 }
-.nosotros__contenedor__derecha__portada {
+.nosotros__contenedor__contenido__derecha__portada {
   position: relative;
 }
-.nosotros__contenedor__derecha__portada--imagen {
+.nosotros__contenedor__contenido__derecha__portada--imagen {
   border-radius: 2.4rem;
   width: 100%;
   height: 55rem;
   object-fit: cover;
   display: block;
 }
-.nosotros__contenedor__derecha__portada__experiencia {
+.nosotros__contenedor__contenido__derecha__portada__experiencia {
   display: flex;
   align-items: center;
   padding: 2rem;
@@ -227,20 +223,20 @@
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
-.nosotros__contenedor__derecha__portada__experiencia--icon {
+.nosotros__contenedor__contenido__derecha__portada__experiencia--icon {
   margin-right: 2rem;
   background-color: rgba(26, 188, 156, 0.15);
   padding: 1.3rem;
   border-radius: 1.2rem;
 }
-.nosotros__contenedor__derecha__portada__experiencia--icon svg {
+.nosotros__contenedor__contenido__derecha__portada__experiencia--icon svg {
   width: 2.8rem;
   color: rgb(26, 188, 156);
 }
-.nosotros__contenedor__derecha__portada__experiencia--text h3 {
+.nosotros__contenedor__contenido__derecha__portada__experiencia h3 {
   font-size: 1.6rem;
 }
-.nosotros__contenedor__derecha__portada__experiencia--text p {
+.nosotros__contenedor__contenido__derecha__portada__experiencia p {
   font-size: 1.2rem;
   color: rgb(108, 124, 147);
   font-weight: 300;
@@ -356,59 +352,67 @@
   background: #01D4FF;
   background: linear-gradient(6deg, rgba(1, 212, 255, 0.05) 0%, rgba(0, 212, 255, 0) 17%, rgba(0, 212, 255, 0.09) 100%);
 }
-.eligenos__contenedor {
+.eligenos__contenedor__contenido {
   padding-bottom: 1rem;
   display: flex;
   gap: 6.4rem;
 }
+.eligenos__contenedor__contenido article {
+  width: calc(100% - 3.2rem);
+}
 @media only screen and (max-width: 48em) {
-  .eligenos__contenedor {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+  .eligenos__contenedor__contenido article {
     width: 100%;
   }
 }
-.eligenos__contenedor__izquierda {
-  width: calc(50% - 3.2rem);
-}
-.eligenos__contenedor__izquierda__inicio h3 {
+.eligenos__contenedor__contenido__izquierda__inicio h3 {
   color: rgb(13, 155, 230);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.4rem;
 }
-.eligenos__contenedor__izquierda__inicio--title {
+.eligenos__contenedor__contenido__izquierda__inicio--title {
   display: flex;
   margin-top: 1.2rem;
   font-size: 4.8rem;
   font-family: "Playfair Display", serif;
   gap: 1rem;
 }
-.eligenos__contenedor__izquierda__inicio--title--span {
+.eligenos__contenedor__contenido__izquierda__inicio--title--span {
   white-space: nowrap;
   color: rgb(13, 155, 230);
 }
-.eligenos__contenedor__izquierda__inicio p {
+.eligenos__contenedor__contenido__izquierda__inicio p {
   margin-top: 1.6rem;
   font-size: 1.8rem;
   line-height: 2.8rem;
   color: rgb(108, 124, 147);
   font-family: "Inter", sans-serif;
 }
-.eligenos__contenedor__izquierda__conoce {
+.eligenos__contenedor__contenido__izquierda__conoce {
   margin-top: 5.6rem;
   gap: 3.2rem;
   display: flex;
   flex-direction: column;
 }
-.eligenos__contenedor__izquierda__conoce__experiencia {
+.eligenos__contenedor__contenido__izquierda__conoce__experiencia {
   display: flex;
   align-items: center;
 }
-.eligenos__contenedor__izquierda__conoce__experiencia--icon {
+.eligenos__contenedor__contenido__izquierda__conoce__experiencia a {
+  margin-right: 2rem;
+  background-color: rgba(13, 155, 230, 0.1);
+  padding: 1.3rem;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+.eligenos__contenedor__contenido__izquierda__conoce__experiencia a i {
+  color: rgb(13, 155, 230);
+}
+.eligenos__contenedor__contenido__izquierda__conoce__experiencia--icon {
   margin-right: 2rem;
   background-color: rgba(13, 155, 230, 0.1);
   padding: 1.3rem;
@@ -417,30 +421,26 @@
   align-items: center;
   justify-content: center;
 }
-.eligenos__contenedor__izquierda__conoce__experiencia--icon svg {
+.eligenos__contenedor__contenido__izquierda__conoce__experiencia svg {
   width: 2rem;
   color: rgb(13, 155, 230);
 }
-.eligenos__contenedor__izquierda__conoce__experiencia--text h3 {
+.eligenos__contenedor__contenido__izquierda__conoce--text h3 {
   font-size: 1.6rem;
   font-weight: 600;
 }
-.eligenos__contenedor__izquierda__conoce__experiencia--text p {
+.eligenos__contenedor__contenido__izquierda__conoce--text p {
   font-size: 1.4rem;
   color: rgb(108, 124, 147);
-}
-.eligenos__contenedor__derecha {
-  width: calc(50% - 3.2rem);
 }
 .eligenos__contenedor__derecha__imagen {
   display: flex;
   flex-wrap: wrap;
   gap: 1.6rem;
 }
-.eligenos__contenedor__derecha__imagen--ver {
-  width: calc(50% - 1rem);
+.eligenos__contenedor__derecha__imagen img {
   border-radius: 2.4rem;
-  width: 28rem;
+  width: 24.4rem;
   height: 25.6rem;
   object-fit: cover;
 }
