@@ -1,0 +1,82 @@
+.portal { 
+    background: linear-gradient(94deg, rgba(1, 212, 255, 0.09) 0%, rgba(0, 212, 255, 0) 17%, rgba(0, 212, 255, 0.09) 100%);
+        margin-top: 8.228rem;
+    &__contenedor{
+            max-width: 44.8rem;
+            
+        &__contenido{
+
+            justify-content: center;
+            text-align: center;
+            display: grid;  
+            &__text{
+                margin-bottom: 4rem;
+                    h1{
+                        font-size: 3rem;
+                        color: #1d2530;
+                        margin-bottom: .8rem;
+                    }
+                    p {
+                        
+                        font-size: 1.7rem;
+                        color: #6c7c93;  
+                    }
+            }
+            
+            &__login{
+                
+                gap: 1.6rem;
+                text-align: center;
+                display: grid;
+                div{
+                    h3 {
+                        color: #1d2530;
+                        font-size: 2rem;
+                        margin-bottom: 0.8rem;
+                        font-weight: 700;
+                    }
+                    p {
+                        color: #6c7c93;
+                        font-size: 1.4rem;
+                    }
+                }
+                
+                &__paciente{
+                    background-color: white;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 44.8rem;
+                    padding: 3.2rem;
+                    display: flex;
+                    border: 2px solid rgb(217, 229, 242);
+                    flex-direction: column;
+                    border-radius: 1.6rem;
+                    transition: all .3s;
+                    
+                    &:hover{
+                        border: 2px solid rgb(61, 181, 205);
+                        
+                        transform: scale(1.02);
+                    }
+                    span {
+                        width: 6.4rem;
+                        height: 6.4rem;    
+                        i {
+                            font-size: 3.2rem;
+                        }
+                    }
+                    &--link{
+                        margin-top: 2.4rem;
+                        font-size: 1.4rem;
+                        width: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+
+                    }
+                }
+            }
+
+        }       
+    }
+}

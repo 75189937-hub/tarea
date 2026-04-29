@@ -24,12 +24,33 @@
             display: flex;
             column-gap: .4rem;
             @media only screen and (max-width: v.$bp-medium) {
-                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                top: 0;
+                left: 0;
+                justify-content: center;
+                align-items: center;
+                row-gap: 2rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .5s;
+                z-index: -1;
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                    transition: all .8s;
+                }
             }
             
             &--link{
+                
               color: rgb(108, 120, 147);
               font-size: 1.4rem;
+              @media only screen and (max-width: v.$bp-medium) {
+                font-size: 2rem; // 👈 aquí
+                }
               padding: .8rem 1.6rem;
               transition: all .3s;
               &:hover {
@@ -44,12 +65,50 @@
               }
             }
         }
+
+        &__menuIcon {
+            padding: 1rem;
+            display: none;
+            position: relative;
+            cursor: pointer;
+            @media only screen and (max-width: v.$bp-medium){
+                display: block;
+            }
+            svg{
+                width: 2rem;
+                color: rgb(23, 23, 23);
+            }
+
+            &__circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                background-color: rgb(254, 254, 252);
+                z-index: -1;
+                transition: all .5s;
+                &.active {
+                    width: 250rem;
+                    height: 250rem;
+                    transition: all .8s;
+                }
+            }
+            
+        }
         &__menucita {
+            
             display: flex;
             align-items: center;
             column-gap: 1.2rem;
             display: flex;
             &--link {
+                
+                @media only screen and (max-width: v.$bp-medium) {
+                display: none;
+            }
                 color: rgb(108, 120, 147);
                 font-size: 1.4rem;
                 transition: all .3s;
@@ -61,6 +120,9 @@
                 }
             }
             &--portal{
+                @media only screen and (max-width: v.$bp-medium) {
+                display: none;
+            }
                 font-size: 1.4rem;
                 color: rgb(29, 36, 48);
                 padding: .9rem 2rem;
@@ -73,6 +135,9 @@
                 }
             }
             &--cita{
+                @media only screen and (max-width: v.$bp-medium) {
+                display: none;
+            }
                 color:white;
                 font-size: 1.4rem;
                 padding: 1rem 2.4rem;

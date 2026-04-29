@@ -1,6 +1,5 @@
 @use "../../base/variables" as v;
 .cita{
-    
     background: linear-gradient(0deg, rgba(0, 208, 250, 0.24) 0%, rgba(1, 212, 255, 0.34) 37%, rgba(13, 213, 254, 0.6) 96%),url(../../../img/entrada.webp);
     background-position: center;
     background-size: cover;
@@ -31,13 +30,11 @@
             }
         }
         &__menu{
-            
-            margin-top: 4rem;
+            margin-top: 4.5rem;
             display: flex;
             gap: 2rem;
-            align-items: center;
-            justify-content: center;
-                
+            flex-wrap: wrap;
+            justify-content: center;                
             &--llamar{
                 display: flex;
                 gap: 1rem;
@@ -49,7 +46,7 @@
                 padding: 1.8rem 5.4rem;
                 border-color: rgb(28, 56, 56);
                 border-radius: 1rem;
-                border: 2px solid rgba(29, 36, 48, .2);
+                border: 2px solid rgba(184, 204, 238, 0.2);
                     &:hover {
                         color: white;
                         background-color: rgb(26, 188, 156);

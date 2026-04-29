@@ -8,7 +8,13 @@
             flex-wrap: wrap;
             gap: 4rem;
             article{
-            width: calc(25% - 12rem/4);         
+            width: calc(25% - 12rem/4);
+            @media only screen and (max-width: v.$bp-medium) {
+                width: calc(50% - 4rem);
+                }  
+                @media only screen and (max-width: v.$bp-small){
+                width: 100%;
+                }       
             img{
                 width: 5rem;
                 margin-bottom: 2.4rem;

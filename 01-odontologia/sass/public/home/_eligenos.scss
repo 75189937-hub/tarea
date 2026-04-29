@@ -2,21 +2,17 @@
 .eligenos{
     background: #01D4FF;
     background: linear-gradient(6deg, rgba(1, 212, 255, 0.05) 0%, rgba(0, 212, 255, 0) 17%, rgba(0, 212, 255, 0.09) 100%);
-    &__contenedor{
-        
-        &__contenido{
-        
-         padding-bottom: 1rem;
+    &__contenedor{     
+        &__contenido{    
+        padding-bottom: 1rem;
         display: flex;
         gap: 6.4rem;
-        
-        article{
-            width: calc(100% - 6.4rem / 2); 
-                 @media only screen and (max-width: v.$bp-medium) {
-                    width: 100%;
+        &__col{
+            width: calc(100% - 6.4rem / 2);           
+            }
+            @media only screen and (max-width: v.$bp-medium) {
+                    flex-direction: column;
                 }
-
-        }    
         &__izquierda {
             
             &__inicio{
@@ -27,7 +23,6 @@
                     font-size: 1.4rem;
                 }
                 &--title{
-                    display: flex;
                     margin-top: 1.2rem;
                     font-size: 4.8rem;
                     font-family: "Playfair Display", serif;
@@ -55,7 +50,7 @@
                     display: flex;
                     align-items: center; 
                     
-                    a{
+                    span{
                         margin-right: 2rem;
                         background-color: rgb(13, 155, 230, .1);
                         padding: 1.3rem;
@@ -65,27 +60,13 @@
                         justify-content: center;
                         font-size: 1.8rem;
                         i{
-                            
+                            width: 2rem;
                             color: rgb(13, 155, 230)
                         }
 
                     }
-                    &--icon {
-                        margin-right: 2rem;
-                        background-color: rgb(13, 155, 230, .1);
-                        padding: 1.3rem;
-                        border-radius: 1.2rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        
-                         
-                        }
-                        svg {
-                            width: 2rem;   
-                            color: rgb(13, 155, 230)
-                        }
-                    }
+                    
+                    
                     &--text{
                         h3{
                             font-size: 1.6rem;
@@ -97,14 +78,17 @@
                         }
                     }
                 }
+                }
             
             }
-        }
+        
         &__derecha {
             &__imagen{
                 display: flex;
                 flex-wrap: wrap;
                 gap: 1.6rem;
+                align-items: center;
+                justify-content: center;
                
                 img{
                     
@@ -117,6 +101,7 @@
                 
             }
         }
-        
+    } 
+    
     }
-    }
+}
