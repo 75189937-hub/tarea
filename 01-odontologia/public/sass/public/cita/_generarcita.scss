@@ -1,0 +1,171 @@
+@use '../../base/variables' as v;
+.generarcita{   
+    &__contenedor{
+        padding: 0 3.2rem;
+        gap: 4.8rem;
+        display: flex;
+        &__primero{
+            flex: 2;
+            background-color: peru;
+            border-radius: 1.2rem;    
+            padding: 2rem;
+            border: 1px solid #dfe6ec;
+            
+            &__contiene{
+                background-color: white; 
+                border-radius: 1.2rem;              
+                padding: 3.2rem;
+                border: 1px solid #dfe6ec;
+                &__cuadros{
+                    gap: 1.2rem;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    &__espe{
+                        background-color: white;
+                        border-radius: 1.2rem;
+                        padding: 1.6rem;
+                        border: 2px solid #dfe6ec;
+                        display: flex;
+                        align-items: center;
+                        gap: 1.6rem;
+                        cursor: pointer; 
+                        &:hover{
+                            border-color: rgba(13, 162, 231, 0.5);
+                        }
+                        &:focus {
+                            background-color: rgba(17, 165, 245, 0.15);
+                            border-radius: 1.2rem;
+                            border-color: rgb(13, 155, 230);
+                            outline: none;
+                        }
+                        &__icon{
+                            padding: 1rem;
+                            border-radius: 50%;
+                            background-color: rgba(13, 155, 230, .1);
+                            i{
+                                font-size: 2rem;
+                                color: rgb(13, 155, 230);
+                                
+                            }
+                        }
+                        &__text{
+                            align-items: flex-start;
+                            justify-content: center;
+                            flex-direction: column;
+                            display: flex;
+                            flex: 1;
+                            
+                            &--uno{
+                                color: #1d2530;
+                                font-size: 1.4rem;
+                                font-weight: 600;
+                                line-height: 2rem;
+                            }
+                            &--dos{
+                                color: rgb(108, 124, 147);
+                                font-size: 1.2rem;
+                                line-height: 2rem;
+                            }
+                        }
+                        .hola{
+                                font-size: 1.6rem;
+                                color: rgb(13, 155, 230);
+                                display: none;
+                        }
+                        &.active {
+                            border-color: rgb(13, 155, 230);
+                            background-color: rgba(17, 165, 245, 0.15);
+                            .hola{
+                                display: block;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            &__pregunta{
+                background-color: white;
+                border-radius: 1.2rem;              
+                padding: 3.2rem;
+                border: 1px solid #dfe6ec;
+                
+                &__datos{
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1.2rem;
+                    display: grid;
+                    &__campo{
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        
+                        
+                    }
+                }
+                &__nota{
+                    &__campo{
+                        
+                        textarea{
+                            resize: vertical;
+                            min-height: 100px;
+                            padding: .8rem 1.2rem;
+                            border-radius: .8rem;
+                            
+                            font-family: inherit;
+                        }   
+                    }
+                }
+                &__anuncio{
+                    display: none;
+                    
+                    gap: 1.2rem;
+                    background-color: rgba(17, 165, 245, 0.15);
+                    padding: 1.6rem;
+                    border-radius: 1.2rem;
+                    align-items: center;
+                    
+                    i{
+                        font-size: 2rem;
+                        color: rgb(13, 155, 230);
+                    }
+                    p{
+                        font-size: 1.4rem;
+                        span{
+                            font-weight: 600;
+                            color: rgb(13, 155, 230);
+                        }
+
+                    }
+
+                    &.active {
+                        display: flex; // 👈 se muestra solo cuando hay selección
+                    }
+                }
+
+                &__boton{
+                    margin-top: 3.2rem;
+                    font-size: 1.6rem;
+                    width: 100%;
+                    padding: .8rem 1.6rem;
+                    background-color: rgb(13, 155, 230);
+                    border:none;
+                    &:enabled {
+                        cursor: pointer;
+                        opacity: 1;
+                    }
+                    &::enabled:hover {
+                        filter: brightness(1.08);
+                    }
+                }
+            }
+        }
+        &__segundo{
+            flex: 1;
+            background-color: peru;
+            
+            border-radius: 1.2rem;
+                    
+            padding: 2rem;
+            border: 1px solid #dfe6ec;
+        }
+    }
+}

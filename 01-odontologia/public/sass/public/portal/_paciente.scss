@@ -1,0 +1,109 @@
+.paciente{
+    padding: 3.2rem 1.6rem;
+    
+    &__contenedor{
+        
+        &__text{
+            margin-bottom: 3.2rem;
+            h1{
+                font-size: 3rem;
+                font-family: "Playfair Display", serif;
+            }
+            p{
+                margin-top: .4rem;
+                color: #6c7c93;
+                font-size: 1.5rem;
+            }
+        }
+        &__cantidad{
+            display: flex;
+            gap: 1.6rem;
+            margin-bottom: 3.2rem;
+            &__primero{
+                text-align: center;
+                border-radius: 1.2rem;
+                flex: 1;
+                padding: 1.6rem;
+                border: 1px solid #dfe6ec;
+                h1{
+                    font-size: 2.4rem;
+                    color: rgb(13, 155, 230);
+                    line-height: 3.2rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                    color: #6c7c93;
+                    margin-top: .4rem;
+                }
+            }
+        }
+        &__citas{
+            display: flex;
+            gap: 2.4rem;
+            h3{
+                    font-size: 1.8rem;
+                    margin-bottom: 2rem;
+            }
+            &__cliente{
+                flex: 2;
+                
+                &__orden{
+                    display: flex;
+                    border-radius: 1.2rem;
+                    
+                    padding: 2rem;
+                    border: 1px solid #dfe6ec;
+                    &__info{
+                        &--primero{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: .8rem;
+                        gap: .8rem;
+                        span{
+                            font-size: 1.4rem;
+                        }
+                    }
+                    &--segundo{
+                        display: flex;
+                        gap:1.6rem;
+                        span{
+                            display: flex;
+                            align-items: center;
+                            gap: .6rem;
+                            color: #6c7c93;
+                            i{
+                                font-size: 1.4rem;
+                            }
+                            p{
+                                font-size: 1.4rem;
+                            }
+                            
+                        }
+                    }
+                    }
+                    
+                    
+                    i {
+                        
+                        font-size: 1.6rem;
+                        color: #6c7c93;
+                        margin-left: auto;
+                    }
+                }
+                
+            }
+            &__detalle{
+                flex: 1;
+                &__cliente{
+                    border-radius: 1.2rem;
+                    padding: 3.2rem;
+                    border: 1px solid #dfe6ec;
+                p {
+                    font-size: 1.4rem;
+                    color: #6c7c93;
+                }
+                }
+            }
+        }
+    }
+}
