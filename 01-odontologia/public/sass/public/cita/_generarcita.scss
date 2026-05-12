@@ -5,12 +5,7 @@
         gap: 4.8rem;
         display: flex;
         &__primero{
-            flex: 2;
-            background-color: peru;
-            border-radius: 1.2rem;    
-            padding: 2rem;
-            border: 1px solid #dfe6ec;
-            
+            flex: 2;              
             &__contiene{
                 background-color: white; 
                 border-radius: 1.2rem;              
@@ -97,7 +92,125 @@
                         display: flex;
                         flex-direction: column;
                         position: relative;
+                        .calendario{
+                            &__boton {
+                                color: rgb(108, 124, 147);
+                                font-size: 1.4rem;
+                                background-color: rgb(248 250 252 / 0.5);
+                                margin-top: .6rem;
+                                border: .1rem solid rgb(226, 232, 240);
+                                border-radius: 1rem;
+                                padding: 1rem 1.6rem;
+                                line-height: 2rem;
+                                gap: .8rem;
+                                
+                                align-items: center;
+                                display: flex;
+                                cursor: pointer;
+                                transition: border-color .2s ease;
+                                &.active {
+                                    border-color: rgb(13, 155, 230);
+                                                            
+                                }
+                            }
+                            &__lista {
+                                background-color: rgb(248 250 252);
+                                border: .1rem solid rgb(226, 232, 240);
+                                border-radius: 1rem;
+                                position: absolute;
+                                opacity: 0;
+                                visibility: hidden;
+                                width: 100%;
+                                &__header {
+                                        padding: .8rem 1.2rem;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                    .derecha, .izquierda {
+                                        color: rgb(108, 124, 147);
+                                        background-color: rgb(248 250 252 / 0.5);
+                                        margin-top: .6rem;
+                                        padding: .2rem;
+                                        border: .1rem solid rgb(226, 232, 240);    
+                                        border-radius: .8rem;               
+                                        i{
+                                            padding: .4rem;
+                                            font-size: 1.4rem;
+                                            color: rgb(108, 124, 147);
+                                            cursor: pointer;
+                                            
+                                        }
+                                        &:hover{
+                                            background-color: rgb(26, 188, 156);
+                                            color:rgb(255, 255, 255);
+                                        }
+                                        &:active{
+                                            background-color:rgb(13,155,230);
+                                            color:rgb(255, 255, 255);
+                                        }
+                                    }
+                                    .mes-titulo {
+                                        font-size: 1.4rem;
+                                        color: rgb(51, 58, 68);
+                                        font-weight: 600;
+                                    }
+                                }
+                                ul{
+                                        display:grid;
+                                        grid-template-columns: repeat(7,1fr);
+                                        list-style: none;
+                                        padding: .5rem; 
+                                        width: 100%;
+                                        transition: all .3s;
+                                        
+                                        &:focus {
+                                            border-color: rgb(13, 155, 230);
+                                            transition: all 0.2s;
+                                        }
+                                        
+                                        li{
+                                            text-align: center;
+                                            padding: .8rem 0rem;
+                                            font-size: 1.4rem;
+                                            color: rgb(108, 124, 147);
+                                            
+                                            &.active{
+                                                background-color: rgba(13, 155, 230, .1);
+                                                color: rgb(13, 155, 230);
+                                            }
+                                        }
+                                        
+                                    
+                                }
+                                &__grid{
+
+                                    display:grid;
+                                    font-size: 1.4rem;
+                                    grid-template-columns: repeat(7,1fr);
+                                    padding: .5rem;
+                                    .day{
+                                        text-align:center;
+                                        padding:1rem 0;
+                                        border-radius:.8rem;
+                                        cursor:pointer;
+                                        color:rgb(108,124,147);
+                                        &:hover{
+                                            background-color: rgb(26, 188, 156);
+                                            color:rgb(255, 255, 255);
+                                        }
+                                        &.active{
+                                            background-color:rgb(13,155,230);
+                                            color:rgb(255, 255, 255);
+                                        }
+                                    }
+                                }  
+                                &.active{
+                                    opacity: 1;
+                                    visibility: visible;  
+                                }            
+                        }
                         
+}
                         
                     }
                 }
@@ -116,10 +229,9 @@
                 }
                 &__anuncio{
                     display: none;
-                    
+                    padding: 1.2rem;
                     gap: 1.2rem;
                     background-color: rgba(17, 165, 245, 0.15);
-                    padding: 1.6rem;
                     border-radius: 1.2rem;
                     align-items: center;
                     
@@ -160,12 +272,64 @@
         }
         &__segundo{
             flex: 1;
-            background-color: peru;
             
             border-radius: 1.2rem;
                     
-            padding: 2rem;
-            border: 1px solid #dfe6ec;
+        
+            
+            h3{
+                font-size: 1.8rem;
+                color: black;
+                font-weight: 600;
+                margin-bottom: 2.4rem;
+            }
+            .primero{
+                font-size: 1.6rem;
+                color: black;
+                margin-bottom: .5rem;
+            }
+            .segundo{
+                font-size: 1.4rem;
+                color: rgb(108, 124, 147);
+                font-weight: 300;
+            }
+            &__info{
+                background-color: white;
+                border-radius: 1.2rem;              
+                padding: 3.2rem;
+                border: 1px solid #dfe6ec;
+                flex-direction: column;
+                gap: 2rem;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.2rem;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        gap: 1.6rem;
+                        
+                        color: rgb(13, 155, 230);
+                        div{
+                            align-items: center;
+                        }
+                        i{
+                            font-size: 2rem;
+                            background-color: rgba(13, 155, 230, .1);
+                            padding: 1rem;
+                            border-radius: 1rem;
+                        }
+                    }
+                }
+                
+            }
+            &__bono{
+                background-color: rgba(17, 165, 245, 0.15);
+                padding: 3.2rem;
+                border-radius: 1.2rem;
+                margin-top: 2.4rem;
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-const select = document.querySelectorAll('.select');
+const select = document.querySelectorAll('.select ');
 
 select.forEach((input, index) => {
     const div = input.querySelector('div');
@@ -47,4 +47,189 @@ opciones.forEach((btn) => {
         // 👇 MOSTRAR ANUNCIO
         anuncio.classList.add('active');
     });
+});
+
+
+
+//--------------------------------------------------------------------------------------------------
+
+
+const monthElement =
+document.getElementById("mes");
+
+const daysElement =
+document.getElementById("days");
+
+const prevButton =
+document.querySelector(".izquierda");
+
+const nextButton =
+document.querySelector(".derecha");
+
+
+// FECHA ACTUAL
+let currentDate = new Date();
+
+
+// NOMBRES DE LOS MESES
+const monthNames = [
+
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre"
+
+];
+
+
+// FUNCION PRINCIPAL
+function renderCalendar(){
+
+    // AÑO ACTUAL
+    const year =
+    currentDate.getFullYear();
+
+    // MES ACTUAL
+    const month =
+    currentDate.getMonth();
+
+
+    // MOSTRAR MES
+    monthElement.textContent =
+    `${monthNames[month]} ${year}`;
+
+
+    // PRIMER DIA DEL MES
+    const firstDay =
+    new Date(year, month, 1).getDay();
+
+
+    // TOTAL DIAS DEL MES
+    const lastDate =
+    new Date(year, month + 1, 0).getDate();
+
+
+    // LIMPIAR GRID
+    daysElement.innerHTML = "";
+
+
+    // ESPACIOS VACIOS
+    for(let i = 0; i < firstDay; i++){
+
+        const empty =
+        document.createElement("div");
+
+        daysElement.appendChild(empty);
+
+    }
+
+
+    // GENERAR DIAS
+    for(let day = 1; day <= lastDate; day++){
+
+        const dayElement =
+        document.createElement("div");
+
+        dayElement.classList.add("day");
+
+        dayElement.textContent = day;
+
+
+        // CLICK EN FECHA
+        dayElement.addEventListener("click", ()=>{
+
+            // QUITAR ACTIVE ANTERIOR
+            document
+            .querySelectorAll(".day")
+            .forEach(d => {
+                d.classList.remove("active");
+            });
+
+
+            // ACTIVAR DIA
+            dayElement.classList.add("active");
+
+
+            // FECHA COMPLETA
+            const selectedDate =
+            `${day}/${month + 1}/${year}`;
+
+
+            // CAMBIAR TEXTO
+            document.querySelector(
+              ".calendario__boton"
+            ).innerHTML =
+
+            `<i class="fa-regular fa-calendar"></i>
+             ${selectedDate}`;
+
+        });
+
+
+        // INSERTAR DIA
+        daysElement.appendChild(dayElement);
+
+    }
+
+}
+
+
+// BOTON IZQUIERDA
+prevButton.addEventListener("click", ()=>{
+
+    currentDate.setMonth(
+      currentDate.getMonth() - 1
+    );
+
+    renderCalendar();
+
+});
+
+
+// BOTON DERECHA
+nextButton.addEventListener("click", ()=>{
+
+    currentDate.setMonth(
+      currentDate.getMonth() + 1
+    );
+
+    renderCalendar();
+
+});
+
+
+// INICIAR
+renderCalendar();
+//--------------------------------------------------------------------------------------------------
+const boton = document.querySelector('.calendario__boton');
+
+const calendario = document.querySelector('.calendario__lista');
+
+boton.addEventListener('click',()=>{
+
+    calendario.classList.toggle('active');
+    boton.classList.toggle('active');
+    
+
+});
+document.addEventListener('click', (e)=>{
+
+    if(
+        !calendario.contains(e.target)
+        &&
+        !boton.contains(e.target)
+    ){
+
+        calendario.classList.remove('active');
+
+        boton.classList.remove('active');
+    }
 });
