@@ -27,6 +27,11 @@
 
                     include VIEW_LAND . DS . 'servicios' . DS . 'cita.php';
                 }
+
+            if($url == '/portal')
+                {
+                    include VIEW_LAND . DS . 'portal' . DS . 'portal.php';
+                }
         ?>
 
      <?php  ?>
