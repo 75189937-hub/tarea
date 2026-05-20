@@ -4,22 +4,30 @@
             <h1>Bienvenido al CO Santisima Trinidad</h1>
             <p>Inicia sesión para continuar</p>
             <div class="login__contenedor__sesion mt-3">
-                <form action="">
+                <?php showSwalMensaje(); ?>
+        		<?php $res = postValidarLogin(); ?>
+                <form action="" method="post">
 					<div class="formGroup">
 						<label for="email">Email</label>
-						<input type="email" id="email" placeholder="you@example.com">
+						<input type="email" id="email" placeholder="you@example.com" name="email" value = "<?php echo getDato($res, 1, 'email'); ?>">
+                        <div class="error">
+                            <?php echo getDato($res, 0, 'email'); ?>
+                        </div>
 					</div>
 					<div class="formGroup">
 						<label for="password">Contraseña</label>
-						<input type="password" id="password" placeholder="Tu Contraseña">
+						<input type="password" id="password" placeholder="Tu Contraseña" name="password">
+                        <div class="error">
+                            <?php echo getDato($res, 0, 'password'); ?>
+                        </div>
 					</div>
 					<div class="formGroup">
 						<button type="submit" class="btn btn--secondary">Iniciar Sesión <i class="fa-solid fa-arrow-right ml-1"></i></button>
 					</div>
 				</form>
                 <div class="login__contenedor__sesion__crear">
-                    <a href="./">¿Olvidaste tu contraseña?</a>
-                    <a href="registrar">Regístrate</a>
+                    <a href="forgot">¿Olvidaste tu contraseña?</a>
+                    <a href="register">Regístrate</a>
                 </div>
             </div>
         </div>

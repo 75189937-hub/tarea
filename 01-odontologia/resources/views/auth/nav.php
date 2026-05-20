@@ -6,13 +6,14 @@
             </div>
             <img src="../img/logo.png" alt="#" class="nav__contenedor--logo">
             <div class="nav__contenedor__menu">
-                <a href="#" class="nav__contenedor__menu--link">Inicio</a>
+                <a href="../index.php" class="nav__contenedor__menu--link">Inicio</a>
                 <a href="#" class="nav__contenedor__menu--link">Servicios</a>
                 <a href="#" class="nav__contenedor__menu--link">Equipo</a>
                 <a href="#" class="nav__contenedor__menu--link">Testimonios</a>
                 <a href="#" class="nav__contenedor__menu--link">Contacto</a>
             </div>
             <div class="nav__contenedor__menucita">
+                
                 <a href="../portal" class="nav__contenedor__menucita--cita">Volver</a>
             </div>
         </div>

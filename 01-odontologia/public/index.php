@@ -1,8 +1,8 @@
 <?php require_once '../resources/config.php'; ?>
 
-<?php include VIEW_LAND . DS . 'head.php'; ?>
+<?php include VIEW_LAYOUT . DS . 'head.php'; ?>
 
-    <?php include VIEW_LAND . DS . 'nav.php'; ?>
+    <?php include VIEW_LAYOUT . DS . 'nav.php'; ?>
 
         <?php $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); 
         echo $url;

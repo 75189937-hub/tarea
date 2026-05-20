@@ -69,7 +69,7 @@
                     </div>
                     <div class="servis__contenedor__servicios__primero__contenido">
                         <div class = "tamaño mb-2"><i class="fa-regular fa-heart"></i></div>
-                        <h2>Limpieza Dental Profesional</h2>
+                        <h2>Implantes Dentales</h2>
                         <p>Eliminamos la placa bacteriana y el sarro acumulado con ultrasonido y pulido profesional. Incluye revisión completa y radiografías.</p>
                         <div class=" lista ">
                             <span href="#"><i class="fa-solid fa-check"></i>Titanio biocompatible</span>
