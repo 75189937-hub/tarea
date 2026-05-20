@@ -1,8 +1,10 @@
+
 .paciente{
-    padding: 3.2rem 1.6rem;
-    
+    background: #0DD5FE;
+    background: linear-gradient(0deg,rgba(13, 213, 254, 0.04) 0%, rgba(13, 213, 254, 0.04) 37%, rgba(13, 213, 254, 0.06) 96%);
     &__contenedor{
-        
+        &__contenido{
+            margin-top: 4rem;
         &__text{
             margin-bottom: 3.2rem;
             h1{
@@ -23,6 +25,7 @@
             &__primero{
                 text-align: center;
                 border-radius: 1.2rem;
+                background-color: white;
                 flex: 1;
                 padding: 1.6rem;
                 border: 1px solid #dfe6ec;
@@ -54,6 +57,7 @@
                     margin-bottom: 2rem;
                     padding: 2rem;
                     border: 2px solid #dfe6ec;
+                    background-color: white;
                     cursor: pointer;
                     &__info{
                         &--primero{
@@ -108,16 +112,60 @@
             }
             &__detalle{
                 flex: 1;
-                &__cliente{
+
+                &__empty{
+                    text-align: center;
                     border-radius: 1.2rem;
+                    flex: 1;
                     padding: 3.2rem;
-                    border: 1px solid #dfe6ec;
-                p {
-                    font-size: 1.4rem;
-                    color: #6c7c93;
+                    line-height: 2.2rem;
+                    background-color: white;
+                    border: 2px solid #dfe6ec;
+                    p {
+                        font-size: 1.4rem;
+                        color: #6c7c93;
+                    }
+                }
+                &__cliente{   
+                &--text{
+                    border: 2px solid #dfe6ec;
+                    border-radius: 1.2rem;
+                    padding: 2.4rem;
+                    background-color: white;
+                    h4{
+                        font-size: 1.8rem;
+                        margin-bottom: 2rem;
+                    }
+                    p{
+                        font-size: 1.4rem;
+                        color: #6c7c93;       
+                    }
+                    }
+                    .black{
+                        color: #262626;
+                    }
+                    .otro{
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.4rem;
+                        gap: 1rem;
+                        color: #262626;
+                        i{
+                        padding: 1rem;
+                        border-radius: 50%;
+                        background-color: rgba(13, 155, 230, .1);
+                        font-size: 2rem;
+                        color: rgb(13, 155, 230);
+                                
+                            
+                    
+                    }
+
+                   
                 }
                 }
             }
         }
     }
+}
 }

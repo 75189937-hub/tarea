@@ -61,6 +61,6 @@
             </div>
         </div>
     </footer>
-    
+    <script src="../js/paciente.js"></script>
 </body>
 </html>

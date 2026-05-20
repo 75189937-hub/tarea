@@ -1,49 +1,70 @@
-const citas = document.querySelectorAll(
-'.paciente__contenedor__citas__cliente__orden'
-);
+console.log("PACIENTE JS CARGADO");
 
-const detalleServicio =
-document.getElementById('detalleServicio');
+document.addEventListener('DOMContentLoaded', () => {
 
-const detalleFecha =
-document.getElementById('detalleFecha');
+    const citas = document.querySelectorAll(
+    '.paciente__contenedor__contenido__citas__cliente__orden'
+    );
 
-const detalleHora =
-document.getElementById('detalleHora');
+    console.log(citas);
 
-const detalleEstado =
-document.getElementById('detalleEstado');
+});
+document.addEventListener('DOMContentLoaded', () => {
 
-const detalleOdontologo =
-document.getElementById('detalleOdontologo');
+    const citas = document.querySelectorAll(
+    '.paciente__contenedor__contenido__citas__cliente__orden'
+    );
 
-citas.forEach((cita) => {
+    const detalleServicio =
+    document.getElementById('detalleServicio');
 
-    cita.addEventListener('click', () => {
+    const detalleFecha =
+    document.getElementById('detalleFecha');
 
-        // quitar active
-        citas.forEach((item) => {
-            item.classList.remove('active');
+    const detalleHora =
+    document.getElementById('detalleHora');
+
+    const detalleEstado =
+    document.getElementById('detalleEstado');
+
+    const detalleOdontologo =
+    document.getElementById('detalleOdontologo');
+
+    const detalleCard =
+    document.getElementById('detalleCard');
+
+    const detalleEmpty =
+    document.getElementById('detalleEmpty');
+
+    citas.forEach((cita) => {
+
+        cita.addEventListener('click', () => {
+
+            citas.forEach((item) => {
+                item.classList.remove('active');
+            });
+
+            cita.classList.add('active');
+
+            detalleEmpty.style.display = 'none';
+            detalleCard.style.display = 'block';
+
+            detalleServicio.textContent =
+            cita.dataset.servicio;
+
+            detalleFecha.textContent =
+            cita.dataset.fecha;
+
+            detalleHora.textContent =
+            cita.dataset.hora;
+
+            detalleEstado.textContent =
+            cita.dataset.estado;
+
+            detalleOdontologo.textContent =
+            cita.dataset.odontologo;
+
         });
-
-        // active actual
-        cita.classList.add('active');
-
-        // rellenar detalle
-        detalleServicio.textContent =
-        cita.dataset.servicio;
-
-        detalleFecha.textContent =
-        cita.dataset.fecha;
-
-        detalleHora.textContent =
-        cita.dataset.hora;
-
-        detalleEstado.textContent =
-        cita.dataset.estado;
-
-        detalleOdontologo.textContent =
-        cita.dataset.odontologo;
 
     });
 
