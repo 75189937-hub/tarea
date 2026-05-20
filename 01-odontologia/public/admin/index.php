@@ -27,6 +27,10 @@
     <script src="../js/generarcita.js"></script>
 <?php endif; ?>
 
+<?php if($url == '/admin') : ?>
+    <script src="/js/paciente.js"></script>
+<?php endif; ?>
+
 </body>
 
 </html>

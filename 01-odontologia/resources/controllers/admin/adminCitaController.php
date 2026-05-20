@@ -2,6 +2,8 @@
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+    $idUsuario = $_SESSION['id'];
+
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
     $telefono = $_POST['telefono'];
@@ -16,6 +18,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $query = "INSERT INTO citas
     (
+        usuario_id,
         odontologo_id,
         servicio_id,
         nombre,
@@ -28,6 +31,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     VALUES
     (
+        '$idUsuario',
         '$odontologo',
         '$servicio',
         '$nombre',

@@ -279,3 +279,4 @@ document.addEventListener('click', (e)=>{
         boton.classList.remove('active');
     }
 });
+

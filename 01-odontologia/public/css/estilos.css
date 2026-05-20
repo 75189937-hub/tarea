@@ -977,6 +977,7 @@
 .paciente__contenedor__text h1 {
   font-size: 3rem;
   font-family: "Playfair Display", serif;
+  text-transform: uppercase;
 }
 .paciente__contenedor__text p {
   margin-top: 0.4rem;
@@ -1019,8 +1020,10 @@
 .paciente__contenedor__citas__cliente__orden {
   display: flex;
   border-radius: 1.2rem;
+  margin-bottom: 2rem;
   padding: 2rem;
-  border: 1px solid #dfe6ec;
+  border: 2px solid #dfe6ec;
+  cursor: pointer;
 }
 .paciente__contenedor__citas__cliente__orden__info--primero {
   display: flex;
@@ -1051,6 +1054,18 @@
   font-size: 1.6rem;
   color: #6c7c93;
   margin-left: auto;
+}
+.paciente__contenedor__citas__cliente__orden:hover {
+  background-color: #f7fafc;
+  border-color: rgba(13, 155, 230, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+}
+.paciente__contenedor__citas__cliente__orden:active {
+  border-color: rgb(13, 155, 230);
+}
+.paciente__contenedor__citas__cliente__orden:focus {
+  border-color: rgb(13, 155, 230);
 }
 .paciente__contenedor__citas__detalle {
   flex: 1;

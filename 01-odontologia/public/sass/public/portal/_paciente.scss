@@ -8,6 +8,7 @@
             h1{
                 font-size: 3rem;
                 font-family: "Playfair Display", serif;
+                text-transform: uppercase;
             }
             p{
                 margin-top: .4rem;
@@ -50,9 +51,10 @@
                 &__orden{
                     display: flex;
                     border-radius: 1.2rem;
-                    
+                    margin-bottom: 2rem;
                     padding: 2rem;
-                    border: 1px solid #dfe6ec;
+                    border: 2px solid #dfe6ec;
+                    cursor: pointer;
                     &__info{
                         &--primero{
                         display: flex;
@@ -88,6 +90,18 @@
                         font-size: 1.6rem;
                         color: #6c7c93;
                         margin-left: auto;
+                    }
+                    &:hover {
+                        background-color: #f7fafc;
+                        border-color: rgba(13, 155, 230, .5);
+                        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+                        transform: translateY(-5px);
+                    }
+                    &:active{
+                        border-color: rgb(13, 155, 230,);
+                    }
+                    &:focus{
+                        border-color: rgb(13, 155, 230,);
                     }
                 }
                 
