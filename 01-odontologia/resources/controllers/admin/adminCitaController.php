@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $servicio = $_POST['servicio'];
 
     $fecha = $_POST['fecha'];
-    $hora = $_POST['hora'];
+    $hora = date("H:i:s", strtotime($_POST['hora']));
 
     $nota = $_POST['nota'];
 
@@ -42,6 +42,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if($resultado){
         echo "Cita registrada correctamente";
+    } else {
+        echo "Error al registrar cita";
     }
 }
 ?>
